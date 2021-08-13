@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navTop {
+  @apply border-solid border-t-4 w-full pt-4;
+  border-color: rgba(74, 123, 190, 1);
+}
+
+.shadow {
+  @apply w-full border-solid border-t;
+  border-top-color: rgb(49, 49, 49,0.3);
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 163;
+  left: 0;
+  z-index: 60;
+}
+
+.search {
+  @apply w-3/4 -mt-40 z-50 relative;
+	margin-inline-start: auto;
+  margin-inline-end: auto;  
+  z-index: 500;
+}
+
+.calendar {
+  margin-inline-start: auto;
+  margin-inline-end: auto;  
+  z-index: 1000;
+}
+
+.calendarVisuals {
+  @apply inline-flex fixed top-0 w-full h-full flex-wrap justify-center items-stretch flex-col content-center cursor-pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 750;
+}
+
+.calendarHeader {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.week .day:hover {
+  @apply bg-gray-300 cursor-pointer;
+}
+
+.week .day.selected {
+  @apply border-2 border-solid border-yellow-500 bg-blue-500 text-yellow-500 font-black text-lg;
+}
+
+.searchParts{
+  @apply pr-12 text-blue-800 border-blue-800 h-10 relative pt-2 pb-2 no-underline text-base leading-snug rounded-md bg-transparent inline-block mb-0 font-normal text-center align-middle cursor-pointer outline-none whitespace-nowrap;
+  background-image: none;
+  padding: 10px 16px;
+  transition: color 0.2s linear, background-color 0.3s linear;
+  border: 1px solid #1675e0;
+}
+
+.overides {
+  @apply focus:border-opacity-0 border-0 border-none border-transparent;
+}

@@ -1,0 +1,24 @@
+.gridWrapper {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  place-items: center stretch;
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.gridItem {
+  color: #3273dc;
+  font-size: 21px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
