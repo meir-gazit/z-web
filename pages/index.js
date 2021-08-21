@@ -1,6 +1,4 @@
-import Search from 'components/Search'
-import Hero from 'components/Hero'
-import Navbar from 'components/Navbar'
+import { Search, Hero, Navbar } from 'components'
 
 export default function Home() {
   return (
