@@ -1,5 +1,8 @@
 export const MODAL_OPEN = "MODAL_OPEN"
+//#region 		index
 
+export const INCREMENT = "increment"
+export const DECREMENT = "decrement"
 
 //#region 		ROOM
 

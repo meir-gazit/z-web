@@ -5,12 +5,23 @@ const initialState = {
     roomList : [],
     selectedRoom : null,
     isModalOpen : false,
+	idx: 0,
 }
 
 const mainReducer = (state= initialState, action) => {
     switch(action.type){
         case HYDRATE:
             return {...state, ...action.payload}
+        case t.INCREMENT:
+            return {
+                ...state,
+                idx : idx + 1
+            }
+        case t.DECREMENT:
+            return {
+                ...state,
+                idx : idx - 1
+            }
         case t.MODAL_OPEN:
             return {
                 ...state,

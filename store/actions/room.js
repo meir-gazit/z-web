@@ -1,11 +1,31 @@
 import * as t from "../types"
 
+//  -----------------------------------------------
+//#region       helpers
+//  -----------------------------------------------
+
 export const setModalOpen = (isModalOpen) => {
     return {
         type : t.MODAL_OPEN,
         payload: isModalOpen
     }
 }
+
+export const decrementIndex = () => {
+    return {
+        type: t.DECREMENT,
+    }
+}
+
+export const incrementIndex = () => {
+    return {
+        type: t.INCREMENT,
+    }
+}
+
+//#endregion --------------------------------------
+//#region       ROOM
+//  -----------------------------------------------
 
 export const fetchRooms = () => {
     return {
@@ -40,3 +60,4 @@ export const setSelectedRoom = (id) => {
         payload : id
     }
 }
+//#endregion --------------------------------------

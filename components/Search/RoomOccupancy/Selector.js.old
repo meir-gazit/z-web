@@ -1,6 +1,18 @@
 import React from 'react'
 import Room from './Room'
 
+
+import { useDispatch, useSelector } from 'react-redux'
+import { useForm } from 'react-hook-form'
+import { setModalOpen } from '../../../store'
+
+/*
+TODO: 
+	1. change to function component
+	2. update state to work with redux
+	3. check everything working
+*/
+
 export default function Selector() {
 	state = {
 		rooms: [],

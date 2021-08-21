@@ -1,39 +1,13 @@
 import React from "react"
 
-export default function Room({ roomNumber, removeItem }) {
+export default function Room({ roomNumber, removeItem, id }) {
+	console.log({roomNumber})
 	return (
-		<div data={`room_${roomNumber}`} className="w-4/5 cursor-pointer border border-solid border-blue-500">
+		<div id={id} data={`room_${roomNumber}`} className="w-4/5 cursor-pointer border border-solid border-blue-500">
 			<section name={`section_${roomNumber}`} key={Math.random(99999)}>
 				<div key={Math.random(99999)} className="table-row">
-					<div className="table-cell p-1">
-						<div
-							name={`room_${roomNumber}`}
-							key={Math.random(99999)}
-							className={
-								"bg-red-200 font-black text-red-900 p-0.5 cursor-pointer border border-red-900 border-solid"
-							}
-							onClick={(e) => {
-								removeItem(roomNumber)
-							}}
-						>{`ביטול החדר`}</div>
-					</div>
-					<div key={Math.random(99999)} className="table-cell p-1">
-						{"\u00A0"}בחדר{"\u00A0"}
-						{roomNumber === 0 ? 'הראשון' : 
-							(roomNumber === 1 ? 'השני' : 
-								(roomNumber === 2 ? 'השלישי' : 
-									(roomNumber === 3 ? 'הרביעי' : 
-										(roomNumber === 4 ? 'החמישי' : '')									
-									)									
-								)								
-							)
-						}
-						{"\u00A0"}יתארחו
-					</div>
-					<div
-						key={Math.random(99999)}
-						className="table-cell p-1 cursor-pointer"
-					>
+					<div key={Math.random(99999)} className="table-cell p-1">{"\u00A0"}{'בחדר זה יתארחו'}{"\u00A0"}</div>
+					<div key={Math.random(99999)} className="table-cell p-1 cursor-pointer">
 						<select
 							defaultValue={2}
 							id={`adults_${Math.random(99999).toString()}`}
