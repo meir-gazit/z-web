@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Room({ roomNumber, removeItem, id }) {
+export default function Room({ roomNumber, id }) {
 	console.log({roomNumber})
 	return (
 		<div id={id} data={`room_${roomNumber}`} className="w-4/5 cursor-pointer border border-solid border-blue-500">
