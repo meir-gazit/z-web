@@ -1,7 +1,7 @@
-import React from "react"
-import { SearchProvider } from '../../context/SearchContext'
-import { RoomOccupancy } from './RoomOccupancy'
-import { Dates } from './Dates'
+import React, { useContext } from 'react'
+import  {SearchProvider}  from 'context/SearchContext'
+import  RoomOccupancy  from './RoomOccupancy'
+import  Dates  from './Dates'
 
 export default function Search() {
     return (
