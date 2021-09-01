@@ -5,7 +5,7 @@ const SearchContext = createContext()
 export const SearchProvider = ({ children }) => {
 
     const [roomsList, setRoomsList] = useState([])
-    const [dates, setDates] = useState('')
+    const [dateRange, setDateRange] = useState([])
     const [inputTxt, setInputTxt] = useState('')
     const [data, setData] = useState([])
 
@@ -43,7 +43,7 @@ export const SearchProvider = ({ children }) => {
                 const updatedRoom = {
                     ...updatedList[roomIndex]
                 }
-                guestType === 'adult' ? (updatedRoom.adults = amount) : (updatedRoom.childs = amount)
+                guestType === 'adults' ? (updatedRoom.adults = amount) : (updatedRoom.childs = amount)
                 updatedList[roomIndex] = updatedRoom
                 setRoomsList(updatedList)
                 //modifyLog({faunctionName:'updateRoom', callTo:'', withData: { roomId, guestType, amount}, operation: 'SUCCESFUL'})
@@ -94,8 +94,8 @@ export const SearchProvider = ({ children }) => {
         setInputTxt(txt)
     }
 
-    const setDate = (date) => {
-        setDates(date)
+    const setDates = (ranges) => {
+        setDateRange(ranges)
     }
 
     return (
@@ -108,7 +108,7 @@ export const SearchProvider = ({ children }) => {
             roomsAmount,
             getRooms,
             setText,
-            setDate
+            setDates,
         }}>
             {children}
         </SearchContext.Provider>

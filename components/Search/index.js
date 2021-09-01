@@ -1,20 +1,20 @@
 import React, { useContext } from 'react'
 import  {SearchProvider}  from 'context/SearchContext'
 import  RoomOccupancy  from './RoomOccupancy'
-import  Dates  from './Dates'
+import  DateSelctor  from './DateSelctor'
 
 export default function Search() {
     return (
         <SearchProvider>
             <div className="search">
                 <div className="flex flex-col justify-center">
-                    <div className="relative p-12 w-full">
+                    <div className="relative w-full">
                         <div className="overflow-hidden z-0 rounded-full relative p-3">
                             <form role="form" className="relative flex z-50 bg-white rounded-full">
                                 <button className="bg-indigo-500 text-white rounded-full font-semibold px-8 py-4 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none">{'חפש'}</button>
                                 <div className='flex items-center justify-around w-full'>
                                     <RoomOccupancy />
-                                    <Dates />
+                                    <DateSelctor />
                                     <input dir="rtl" type="text" placeholder={'שם יישוב, אזור או עסק'} className='searchParts' />
                                 </div>
                             </form>
