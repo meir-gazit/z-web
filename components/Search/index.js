@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import  {SearchProvider}  from 'context/SearchContext'
-import  RoomOccupancy  from './RoomOccupancy'
-import  DateSelctor  from './DateSelctor'
+import { SearchProvider } from 'context/SearchContext'
+import RoomOccupancy from './RoomOccupancy'
+import DateSelctor from './DateSelctor'
+import AutoComplateText from './SearchTextField/AutoComplateText'
 
 export default function Search() {
     return (
@@ -15,7 +16,7 @@ export default function Search() {
                                 <div className='flex items-center justify-around w-full'>
                                     <RoomOccupancy />
                                     <DateSelctor />
-                                    <input dir="rtl" type="text" placeholder={'שם יישוב, אזור או עסק'} className='searchParts' />
+                                    <AutoComplateText />
                                 </div>
                             </form>
                             <div className="glow glow-1 z-10 animate-glow1 bg-pink-400 rounded-100 w-120 h-120 -top-10 -left-10 absolute"></div>
