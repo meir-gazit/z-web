@@ -3,16 +3,16 @@ import React from 'react'
 export default class AutoComplateText extends React.Component {
     constructor(props) {
         super(props)
-        this.items = ['David', 'Damian', 'Natan', 'Moshe', 'Shaul', 'Sara', 'Jane']
         this.state = { suggestions: [], text: '' }
     }
 
     onTextChange = (e) => {
+        const { items } = this.props
         const value = e.target.value
         let suggestions = []
         if (value.length > 0) {
             const rgx = new RegExp(`^${value}`, 'i')
-            suggestions = this.items.sort().filter(v => rgx.test(v))
+            suggestions = items.sort().filter(v => rgx.test(v))
         }
         this.setState(() => ({ suggestions, text: value }))
     }
